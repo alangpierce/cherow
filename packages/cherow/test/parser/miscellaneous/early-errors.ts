@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Early errors', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure - sloppy / strict', () => {
 

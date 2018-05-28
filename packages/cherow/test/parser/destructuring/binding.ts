@@ -5,6 +5,8 @@ import { parseSource } from '../../../src/parser/parser';
 
 // Note: There exist other tests covering the cases not tested here
 describe('Destructuring - Binding', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {
 

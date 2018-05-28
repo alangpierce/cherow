@@ -2,6 +2,8 @@ import { pass, fail } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Miscellaneous - Escaped identifiers', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {
         fail(`var \\uD83B\\uDE00`, Context.Empty, {

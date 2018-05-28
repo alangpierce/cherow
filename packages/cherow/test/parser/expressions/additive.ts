@@ -2,6 +2,8 @@ import { pass } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Expressions - Object literal', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     pass('--a', Context.OptionsRanges | Context.OptionsLoc | Context.OptionsRaw, {
         source: '--a',

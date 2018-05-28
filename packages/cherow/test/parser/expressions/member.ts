@@ -2,6 +2,8 @@ import { pass, fail } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Expressions - Member', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   pass(`a[b, c]`, Context.OptionsRanges | Context.OptionsLoc | Context.OptionsRaw, {
       source: `a[b, c]`,

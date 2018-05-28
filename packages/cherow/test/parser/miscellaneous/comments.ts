@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Comments', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     fail(`;-->`, Context.Empty, {
         source: `;-->`,

@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Expressions - Function', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   // Note! Cover grammar - destructuring & binding - are tested various places, so we are not testing
   // it here.

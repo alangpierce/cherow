@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Next - Throw expression', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {
         fail('(function () { yield throw 10 })', Context.OptionsNext | Context.Strict | Context.Module, {

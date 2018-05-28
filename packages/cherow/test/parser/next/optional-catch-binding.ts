@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Next - Optional catch binding', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {
         fail('try { throw undefined; } catch (err = "foo") { err }', Context.OptionsNext, {

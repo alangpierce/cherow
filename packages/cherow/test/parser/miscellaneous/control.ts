@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Control', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   pass(`if (a > b) {} else {}
   if (c != d) {}

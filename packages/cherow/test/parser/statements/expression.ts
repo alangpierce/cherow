@@ -2,6 +2,8 @@ import { pass, fail } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Statements - Expression', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   describe('Pass', () => {
 

@@ -2,6 +2,8 @@ import { pass, fail } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Statements - Switch', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   describe('Failure', () => {
     fail('switch (c) { default: default: }', Context.Empty, {

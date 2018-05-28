@@ -2,6 +2,8 @@ import { fail } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Expressions - Global code', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   describe('Failure', () => {
 

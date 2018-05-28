@@ -6,6 +6,8 @@ import { parseSource } from '../../../src/parser/parser';
 // This is also known as 'dynamic import'
 
 describe('Next - Import', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {
 

@@ -4,6 +4,8 @@ import { parseSource } from '../../../src/parser/parser';
 import * as t from 'assert';
 
 describe('Expressions - Conditional expression', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   describe('Failure', () => {
 

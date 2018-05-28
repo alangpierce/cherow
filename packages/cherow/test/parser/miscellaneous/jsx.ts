@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - JSX', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     const invalidSyntax = [
         `<1/>`,
@@ -90,6 +92,8 @@ describe('Miscellaneous - JSX', () => {
   });
 
 describe('Pass', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
       const validSyntax = [
         '<a>></a>',

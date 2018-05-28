@@ -5,6 +5,8 @@ import { parseSource } from '../../../src/parser/parser';
 
 // Validate miscellaneous combinations of call expr, arrows and async arrows
 describe('Miscellaneous - Edge cases', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   pass(`async`, Context.OptionsRanges | Context.OptionsLoc | Context.OptionsRaw, {
       source: 'async',

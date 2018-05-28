@@ -2,6 +2,8 @@ import { pass } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Miscellaneous - Iranian', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failure', () => {});
 

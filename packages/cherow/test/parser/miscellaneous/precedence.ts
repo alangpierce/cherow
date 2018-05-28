@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Precedence', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   pass(`var a, b, c, d, e, f, g, x, y, z;
   a = 1 + 2 * 3 / 5;

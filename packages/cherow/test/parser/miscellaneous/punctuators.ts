@@ -2,6 +2,8 @@ import { pass } from '../../test-utils';
 import { Context } from '../../../src/utilities';
 
 describe('Miscellaneous - Punctuators', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     pass(`interpretation of all punctuators`, Context.OptionsRanges | Context.OptionsLoc | Context.OptionsRaw, {
         source: `({});[];

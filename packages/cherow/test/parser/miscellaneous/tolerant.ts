@@ -2,6 +2,8 @@ import { parseScript } from '../../../src/cherow';
 import * as t from 'assert';
 
 describe('Miscellaneous - Tolerant mode', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     const tolerantSyntax = [
         '/* /* if(foo) {}',

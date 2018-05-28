@@ -8,6 +8,8 @@ import { parseSource } from '../../../src/parser/parser';
 // Note! This is not finished yet - still a few non-failing tests. Waiting for finale specs
 
 describe('Next - Class fields', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failures', () => {
 

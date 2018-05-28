@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Sequence', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   pass(`let a = (x => (x, x * 2), 3);
   let b = ((x, y) => (x, x * y), 1);

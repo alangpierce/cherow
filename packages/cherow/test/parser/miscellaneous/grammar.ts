@@ -14,6 +14,8 @@ import { parseSource } from '../../../src/parser/parser';
 // - Invalid syntax
 
 describe('Miscellaneous - Cover grammar', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     describe('Failures', () => {
 

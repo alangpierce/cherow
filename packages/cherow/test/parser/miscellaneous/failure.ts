@@ -3,6 +3,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Miscellaneous - Failure', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     const programs = [
         `class default`,

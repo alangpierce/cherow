@@ -3,6 +3,8 @@ import { Context } from '../../../src/utilities';
 
 // A number of slash-disambiguation corner cases
 describe('Miscellaneous - Slash', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
       pass(`+{} / 2`, Context.OptionsRanges | Context.OptionsLoc | Context.OptionsRaw, {
           source: '+{} / 2',

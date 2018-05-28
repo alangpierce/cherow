@@ -5,7 +5,9 @@ import { Context } from '../../../src/utilities';
 import * as ESTree from '../../../src/estree';
 
 describe('Cherow - API', () => {
-  
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
+
    it('should parse script code with "parse"', () => {
       assert.match(parse('foo'), {
           body: [{

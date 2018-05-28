@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Failure', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     const invalidSyntax = [
         ',',
@@ -144,6 +146,8 @@ describe('Failure', () => {
 });
 
 describe('Pass', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     const validSyntax = [
         ' function  a(b,) {}',

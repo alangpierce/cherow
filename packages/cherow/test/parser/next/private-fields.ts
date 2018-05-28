@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Next - Private fields', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
     // TODO! This is not finished yet - still a few non-failing tests. Waiting for finale specs
 

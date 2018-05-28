@@ -4,6 +4,8 @@ import * as t from 'assert';
 import { parseSource } from '../../../src/parser/parser';
 
 describe('Expressions - Object literal', () => {
+  beforeEach(() => console.log = () => {});
+  afterEach(() => delete console.log);
 
   // Some of the tests are copied from V8
 
