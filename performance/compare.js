@@ -36,6 +36,13 @@ var setupBenchmarks,
 
 parsers = [
 {
+    name: 'Sucrase',
+    src: '../sucrase-parser-browser-build.js',
+    parse: function (code) {
+        window.testSucraseParse(code);
+    }
+},
+{
     name: 'Cherow',
     src: '../cherow.min.js',
     version: function () {
